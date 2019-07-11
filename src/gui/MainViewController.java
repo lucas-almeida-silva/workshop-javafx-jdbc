@@ -34,7 +34,7 @@ public class MainViewController implements Initializable {
 	
 	@FXML
 	public void onMenuItemDepartmentAction() {
-		System.out.println("onMenuItemDepartmentAction");
+		loadView("/gui/DepartmentList.fxml");
 	}
 	
 	@FXML
@@ -55,7 +55,7 @@ public class MainViewController implements Initializable {
 			Scene mainScene = Main.getMainScene();
 			VBox mainVBox = (VBox) ((ScrollPane) mainScene.getRoot()).getContent(); //pega o primeiro elemento da view, que no caso é o ScroolPane e acessa o conteúdo dele, que é o vbox
 			
-			Node mainMenu = mainVBox.getChildren().get(0);
+			Node mainMenu = mainVBox.getChildren().get(0); //Label about
 			mainVBox.getChildren().clear();
 			mainVBox.getChildren().add(mainMenu);
 			mainVBox.getChildren().addAll(newVBox.getChildren());
