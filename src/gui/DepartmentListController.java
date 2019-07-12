@@ -56,7 +56,7 @@ public class DepartmentListController implements Initializable {
 		tableColumnName.setCellValueFactory(new PropertyValueFactory<>("Name"));
 		
 		Stage stage = (Stage) Main.getMainScene().getWindow();
-		tableViewDepartment.prefHeightProperty().bind(stage.heightProperty());
+		tableViewDepartment.prefHeightProperty().bind(stage.heightProperty()); //preencher a tela
 	}
 	
 	public void updateTableView() {
